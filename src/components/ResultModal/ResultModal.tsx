@@ -25,7 +25,7 @@ export const ResultModal =
             }), []);
 
             return (
-                <dialog ref={dialog} className="result-modal">
+                <dialog ref={dialog} className="result-modal" onClose={props.onReset}>
                     {userLost ? <h2>You lost!</h2> : <h2>Your score: {score}</h2>}
                     <p>The target time was <strong>{props.targetTime}</strong> seconds.</p>
                     <p>You stopped the timer with <strong>{formattedRemainingTime} seconds left.</strong></p>
